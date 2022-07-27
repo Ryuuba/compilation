@@ -1,6 +1,7 @@
-main.cc
 *.exe
 prog*
 *.out
 *.txt
 *.s
+*.dump
+*.o
