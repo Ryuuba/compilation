@@ -59,23 +59,24 @@ alias riscv-objdump=riscv64-elf-objdump
 ## Metodología
 
 1. Clona el repositorio https://github.com/Ryuuba/compilation.git.
-2. Analiza los archivos main_macro.c y arith_macro. poniendo atención en las directivas #define.
-3. Ejecuta el comando riscv-gcc -E main_macro.cc -mabi=ilp32 -march=rv32i > main.txt.
-4. Analiza el contenido del archivo main.txt buscando cambios en el código.
-5. Analiza los archivos main_func.c y arith poniendo atención en la declaración de las funciones.
-6. Ejecuta el comando riscv-gcc -E main_func.cc -mabi=ilp32 -march=rv32i > main.txt buscando cambios en el código.
-7. Analiza el archivo main_if.cc poniendo atención en las directivas #if.
-8. Ejecuta el comando riscv-gcc -E -DMACRO main_if.cc -mabi=ilp32 -march=rv32i > main.
+2. Analiza los archivos `main_macro.c` y `arith_macro.h`. poniendo atención en las directivas `#define`.
+3. Ejecuta el comando `riscv-gcc -E main_macro.cc -mabi=ilp32 -march=rv32i > main.txt`.
+4. Analiza el contenido del archivo `main.txt` buscando cambios en el código.
+5. Analiza los archivos `main_func.c` y `arith.h` poniendo atención en la declaración de las funciones.
+6. Ejecuta el comando `riscv-gcc -E main_func.cc -mabi=ilp32 -march=rv32i > main.txt` buscando cambios en el código.
+7. Analiza el archivo `main_if.cc` poniendo atención en las directivas `#if`.
+8. Ejecuta el comando `riscv-gcc -E -DMACRO main_if.cc -mabi=ilp32 -march=rv32i > main`.
 9. Analiza el resultado y dale una explicación.
-10. Ejecuta el comando riscv-gcc -E main_if.cc > main -mabi=ilp32 -march=rv32i.
+10. Ejecuta el comando `riscv-gcc -E main_if.cc > main -mabi=ilp32 -march=rv32i`.
 11. Analiza el resultado y dale una explicación.
-12. Analiza el contenido del archivo main_even.cc poniendo atención en las operaciones en el se realizan.
-13. Investiga cómo se implementa la función módulo en lenguaje ensamblador x86.
-14. Ejecuta el comando riscv-gcc -S main_even.cc -mabi=ilp32 -march=rv32i.
+12. Analiza el contenido del archivo `main_even.cc` poniendo atención en las operaciones en el se realizan.
+13. Investiga cómo se implementa la función módulo en lenguaje ensamblador risc-v.
+14. Ejecuta el comando `riscv-gcc -S main_even.cc -mabi=ilp32 -march=rv32i`.
 15. Busca en el código ensamblador del programa la operación módulo.
-16. Explica cómo se verifica en ensamblador que un número es par y qué ocurre con la suma de 4+3.
-17. Ejecuta el comando riscv-gcc -c main_even.cc -mabi=ilp32 -march=rv32i.
-18. Explica qué ocurre si intentas abrir el archivo main_even.o.
-19. Ejecuta el comando objdump -o main_even.o > main.dump.
-20. Compara el contenido del archivo main.dump con el main.s.
+16. Explica cómo se verifica en ensamblador que un número es par y qué ocurre con la suma de `4+3`.
+17. Ejecuta el comando `riscv-gcc -c main_even.cc -mabi=ilp32 -march=rv32i`.
+18. Explica qué ocurre si intentas abrir el archivo `main_even.o`.
+19. Ejecuta el comando `riscv-objdump -o main_even.o > main.dump`.
+20. Compara el contenido del archivo `main.dump` con el `main.s`.
 21. Explica las diferencias entre los dos archivos.
+22. Explica la estructura del archivo `main.dump`.
