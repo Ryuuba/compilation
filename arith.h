@@ -1,51 +1,39 @@
-#if !defined(ARITH)
-#define ARITH
+#if !defined(ARITH_H)
+#define ARITH_H
 
 /** @brief Add two 32-bit integers
  * @param a The first addend
  * @param b The second addend
  * @returns a + b
  */
-int add(const int& a, const int& b);
+int add(int a, int b);
 
 /** @brief Performs a subtraction between two 32-bit integers
  * @param a The minuend
- * @param b The sustrahend
+ * @param b The subtrahend
  * @returns a - b
  */
-int sub(const int& a, const int& b);
+int sub(int a, int b);
 
 /** @brief Multiplies two 32-bit integers
  * @param a The multiplicand
  * @param b The multiplier
  * @returns a * b
  */
-int mult(const int& a, const int& b);
+int mult(int a, int b);
 
 /** @brief Divides two 32-bit integers
  * @param a The dividend
  * @param b The divisor
  * @returns a / b
  */
-int div(const int& a, const int& b);
+int div(int a, int b);
 
 /** @brief Computes the modulus between two 32-bit integers
  * @param a The dividend
  * @param b The divisor
  * @returns a % b
  */
-int mod(const int& a, const int& b);
-
-/** @brief Increments the value of a, then returns a + 1
- * @param a An integer
- * @returns a + 1
- */
-int pre_inc(int& a);
-
-/** @brief Increments the value of a, then returns a
- * @param a An integer
- * @returns a
- */
-int pst_inc(int& a);
+int mod(int a, int b);
 
 #endif

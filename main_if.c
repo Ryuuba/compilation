@@ -1,7 +1,7 @@
 #if defined(MACRO)
-#include "arith_macro"
+#include "arith_macro.h"
 #else
-#include "arith"
+#include "arith.h"
 #endif
 
 int main()

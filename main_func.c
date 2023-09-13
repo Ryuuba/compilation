@@ -1,4 +1,4 @@
-#include "arith"
+#include "arith.h"
 
 int main()
 {

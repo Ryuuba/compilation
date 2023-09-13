@@ -1,5 +1,5 @@
-#if !defined(ARITH_MACRO)
-#define ARITH_MACRO
+#if !defined(ARITH_MACRO_H)
+#define ARITH_MACRO_H
 
 #define ADD(A, B) (A) + (B)
 #define SUB(A, B) (A) - (B)
